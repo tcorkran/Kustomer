@@ -1,0 +1,25 @@
+﻿services:
+  kustomer:
+    image: ${DOCKER_REGISTRY-}kustomer.api
+    container_name: api
+    build:
+      context: .
+      dockerfile: Kustomer.API/Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://kustomer.dashboard:18889
+    networks:
+      - otel
+  
+  kustomer.dashboard:
+    image: mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest
+    container_name: dashboard
+    ports:
+      - 18888:18888
+    networks:
+      - otel
+
+networks:
+  otel:
