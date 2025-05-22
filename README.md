@@ -25,12 +25,17 @@ cd Kustomer.API
 dotnet run
 ```
 
-**4. [Scalar OpenAPI/Swagger](/docs/SCALAR.md)
+**4. [Kubernetes](/docs/KUBERNETES.md)**
 
 
-**5. [Observability](/docs/ASPIRE.md)
+**5. [Scalar OpenAPI/Swagger](/docs/SCALAR.md)**
 
 
+**6. [Observability](/docs/ASPIRE.md)**
+
+
+## CICD
+[Read more on the CICD pipeline](/docs/CICD.md)
 
 ## Testing the project
 ```
