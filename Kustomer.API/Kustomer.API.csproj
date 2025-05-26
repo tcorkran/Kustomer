@@ -38,7 +38,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Kustomer.Application\Kustomer.Application.csproj" />
-      <ProjectReference Include="..\Kustomer.Persistence\Kustomer.Infrastructure.csproj" />
+      <ProjectReference Include="..\Kustomer.Infrastructure\Kustomer.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
