@@ -7,15 +7,15 @@ namespace Kustomer.Application.Customers.Commands;
 
 public class UpdateCustomer
 {
-    public class Command : IRequest<Guid>
+    public class Command : IRequest<Customer>
     {
         public required Guid Id { get; set; }
         public required Customer Customer { get; set; }
     }
 
-    public class Handler(IRepository<Customer> repository) : IRequestHandler<Command, Guid>
+    public class Handler(IRepository<Customer> repository) : IRequestHandler<Command, Customer>
     {
-        public async Task<Guid> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Customer> Handle(Command request, CancellationToken cancellationToken)
         {
             var customer = await repository.GetByIdAsync(request.Id, cancellationToken); ;
                 
@@ -41,7 +41,7 @@ public class UpdateCustomer
 
             await repository.UpdateAsync(customer, cancellationToken);
                 
-            return customer.Id;
+            return customer;
         }
     }
 }

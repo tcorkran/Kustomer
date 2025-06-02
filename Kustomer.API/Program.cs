@@ -19,7 +19,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddDbContext<KustomerDbContext>(options => 
     options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 // MediatR
-builder.Services.AddMediatR(x => 
+builder.Services.AddMediatR(x =>
     x.RegisterServicesFromAssemblyContaining<GetCustomerList.Handler>());
 
 // Add OpenTelemetry

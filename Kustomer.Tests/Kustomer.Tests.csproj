@@ -26,7 +26,7 @@
       <ProjectReference Include="..\Kustomer.API\Kustomer.API.csproj" />
       <ProjectReference Include="..\Kustomer.Application\Kustomer.Application.csproj" />
       <ProjectReference Include="..\Kustomer.Domain\Kustomer.Domain.csproj" />
-      <ProjectReference Include="..\Kustomer.Persistence\Kustomer.Infrastructure.csproj" />
+      <ProjectReference Include="..\Kustomer.Infrastructure\Kustomer.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

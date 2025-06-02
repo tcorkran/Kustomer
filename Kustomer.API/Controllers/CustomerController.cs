@@ -29,17 +29,15 @@ public class CustomerController(IMediator mediator) : ControllerBase
 
     #region CreateCustomer
     [HttpPost]
-    public async Task<ActionResult<Guid>> CreateCustomer([FromBody] Customer customer)
+    public async Task<ActionResult<Customer>> CreateCustomer([FromBody] Customer customer)
     {
-        var details = await mediator.Send(new CreateCustomer.Command { Customer = customer });
-
-        return CreatedAtRoute(nameof(GetCustomer), new { id = details.Id }, details);
+        return await mediator.Send(new CreateCustomer.Command { Customer = customer });
     }
     #endregion
 
     #region UpdateCustomer
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<Guid>> UpdateCustomer(Guid id, [FromBody] Customer customer)
+    public async Task<ActionResult<Customer>> UpdateCustomer(Guid id, [FromBody] Customer customer)
     {
         return await mediator.Send(new UpdateCustomer.Command { Id = id, Customer = customer });
     }

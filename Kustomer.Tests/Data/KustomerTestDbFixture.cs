@@ -1,6 +1,5 @@
 ﻿using Kustomer.Domain.Entities;
 using Kustomer.Infrastructure.Data;
-using Kustomer.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

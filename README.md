@@ -44,7 +44,7 @@ dotnet test
 ```
 
 ## Playing with App Integration
-Todo
+[Python Client Integration script documentation](/docs/INTEGRATIONS.md)
 
 ## Future Roadmap
 - Replace controllers with [FastEndpoints](https://github.com/FastEndpoints/FastEndpoints)

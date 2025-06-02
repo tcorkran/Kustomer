@@ -5,7 +5,7 @@
 
 [!NOTE]
 Scalar client only runs on development environment.\
-[http://localhost/scalar/v1](http://localhost/scalar/v1)
+[http://localhost:8080/scalar/v1](http://localhost/scalar/v1)
 
 ![Scalar main page](/docs/assets/scalar_1.png)
 

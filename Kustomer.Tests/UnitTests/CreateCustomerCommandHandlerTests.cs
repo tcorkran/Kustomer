@@ -36,6 +36,10 @@ public class CreateCustomerCommandHandlerTests
         // Assert
         Assert.NotNull(result);
         Assert.Equal(result, testCustomer);
+        Assert.Equal(testCustomer.FirstName, result.FirstName);
+        Assert.Equal(testCustomer.LastName, result.LastName);
+        Assert.Equal(testCustomer.Email, result.Email);
+        Assert.Equal(testCustomer.Phone, result.Phone);
     }
 
     [Fact]

@@ -25,7 +25,9 @@ deployment.apps/kustomer created
 deployment.apps/kustomer-dashboard created
 ```
 
-To access your application you can use the following if you are using Minikube:
+API can be found at http://localhost:8080
+
+To access your application details you can use the following if you are using Minikube:
 ```
 minikube service kustomer
 
